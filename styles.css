@@ -132,3 +132,22 @@ form button:hover {
         font-size: 1.5em;
     }
 }
+
+.image-container {
+    perspective: 1000px; /* Adds perspective to the 3D transformation */
+}
+
+.rotating-image {
+    width: 300px; /* Adjust the size as needed */
+    animation: rotateY 3s linear infinite;
+    transform-style: preserve-3d; /* Ensures 3D transformations are preserved */
+}
+
+@keyframes rotateY {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
